@@ -14,3 +14,16 @@
 	border: solid #333;
 	text-align: center;
 }
+.card-group {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.card {
+	margin: 1rem;
+	padding: 0.75rem;
+	background-color: #d3d3d3;
+}
+.card .name {
+	text-transform: capitalize;
+}
