@@ -3,6 +3,7 @@
 .app {
 	text-align: center;
 	font-family: "Montserrat", sans-serif;
+	padding: 1rem;
 }
 .search-field {
 	width: 25%;
@@ -11,4 +12,5 @@
 	outline: none;
 	font-size: 1rem;
 	border: solid #333;
+	text-align: center;
 }
