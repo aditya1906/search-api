@@ -24,9 +24,13 @@ class App extends Component {
 	onSearchChange = event => {
 		const searchUser = this.state.fetchUsers.filter(
 			user =>
-				user.name.first.toLowerCase().includes(event.target.value) ||
-				user.name.last.toLowerCase().includes(event.target.value) ||
-				user.email.toLowerCase().includes(event.target.value)
+				user.name.first
+					.toLowerCase()
+					.includes(event.target.value.toLowerCase()) ||
+				user.name.last
+					.toLowerCase()
+					.includes(event.target.value.toLowerCase()) ||
+				user.email.toLowerCase().includes(event.target.value.toLowerCase())
 		);
 		this.setState({ users: searchUser });
 	};
