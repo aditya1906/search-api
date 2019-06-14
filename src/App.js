@@ -25,7 +25,8 @@ class App extends Component {
 		const searchUser = this.state.fetchUsers.filter(
 			user =>
 				user.name.first.toLowerCase().includes(event.target.value) ||
-				user.name.last.toLowerCase().includes(event.target.value)
+				user.name.last.toLowerCase().includes(event.target.value) ||
+				user.email.toLowerCase().includes(event.target.value)
 		);
 		this.setState({ users: searchUser });
 	};
