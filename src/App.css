@@ -22,13 +22,31 @@
 .card {
 	width: 15rem;
 	border-radius: 1rem;
+	border: 0.5rem solid rgb(3, 150, 183);
 	margin: 1rem;
 	padding: 0.75rem;
-	background-color: #d3d3d3;
+	background: #00d2ff; /* fallback for old browsers */
+	background: -webkit-linear-gradient(
+		to bottom,
+		#00d2ff,
+		#3a7bd5
+	); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to bottom,
+		#00d2ff,
+		#3a7bd5
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	box-shadow: 0.5rem 0.5rem 0.75rem rgba(0, 0, 0, 0.25);
 }
 .card * {
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+.card img {
+	border: 0.15rem solid black;
+}
+.card .description {
+	border: 0.2rem solid rgba(0, 0, 0, 0.05);
 }
 .card .name {
 	margin-bottom: 0.25rem;

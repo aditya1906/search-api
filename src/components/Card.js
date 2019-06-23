@@ -7,8 +7,10 @@ class Card extends Component {
 		return (
 			<div className="card">
 				<img src={imgSrc} alt={name} />
-				<p className="name">{name}</p>
-				<p className="email">{email}</p>
+				<div className="description">
+					<p className="name">{name}</p>
+					<p className="email">{email}</p>
+				</div>
 			</div>
 		);
 	}
