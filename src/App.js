@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
-import SearchBox from "./SearchBox";
-import CardList from "./CardList";
+import SearchBox from "./components/SearchBox";
+import CardList from "./components/CardList";
 
 class App extends Component {
 	constructor() {
@@ -30,7 +30,9 @@ class App extends Component {
 				user.name.last
 					.toLowerCase()
 					.includes(event.target.value.toLowerCase()) ||
-				user.email.toLowerCase().includes(event.target.value.toLowerCase())
+				user.email
+					.toLowerCase()
+					.includes(event.target.value.toLowerCase())
 		);
 		this.setState({ users: searchUser });
 	};
