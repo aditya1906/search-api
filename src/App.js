@@ -37,6 +37,7 @@ class App extends Component {
 					.includes(event.target.value.toLowerCase())
 		);
 		this.setState({ users: searchUser });
+		this.setState({ animate: !this.state.animate });
 	};
 	render() {
 		return (
@@ -44,7 +45,9 @@ class App extends Component {
 				<h1>Awesome Search API</h1>
 				<SearchBox onSearchChange={this.onSearchChange} />
 				{this.state.fetchUsers.length !== 0 ? (
-					<CardList users={this.state.users} />
+					<div className={this.state.animate ? "fade" : "hide"}>
+						<CardList users={this.state.users} />
+					</div>
 				) : (
 					<Loading />
 				)}

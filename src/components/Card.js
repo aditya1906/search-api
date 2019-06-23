@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 class Card extends Component {
 	render() {
 		const { imgSrc, name, email } = this.props;

@@ -6,13 +6,29 @@
 	padding: 1rem;
 }
 
-.fade-appear {
-	opacity: 0.01;
+.fade {
+	animation: fadeIn 1s forwards;
 }
 
-.fade-appear.fade-appear-active {
-	opacity: 1;
-	transition: opacity 1000ms ease-in;
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes fadeInHide {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.hide {
+	animation: fadeInHide 1s forwards;
 }
 
 .search-field {
