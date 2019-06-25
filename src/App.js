@@ -3,6 +3,7 @@ import "./App.css";
 import SearchBox from "./components/SearchBox";
 import CardList from "./components/CardList";
 import Loading from "./components/Loading";
+import Scroll from "./components/Scroll";
 
 class App extends Component {
 	constructor() {
@@ -44,13 +45,15 @@ class App extends Component {
 			<div className="app">
 				<h1>Awesome Search API</h1>
 				<SearchBox onSearchChange={this.onSearchChange} />
-				{this.state.fetchUsers.length !== 0 ? (
-					<div className={this.state.animate ? "fade" : "hide"}>
-						<CardList users={this.state.users} />
-					</div>
-				) : (
-					<Loading />
-				)}
+				<Scroll>
+					{this.state.fetchUsers.length !== 0 ? (
+						<div className={this.state.animate ? "fade" : "hide"}>
+							<CardList users={this.state.users} />
+						</div>
+					) : (
+						<Loading />
+					)}
+				</Scroll>
 			</div>
 		);
 	}
